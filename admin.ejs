@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+ </script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+ <script type = "text/javascript" >
+ function preventBack()
+  {
+       console.log("runs")
+      window.history.forward(); }
+
+setTimeout("preventBack()", 0);
+window.onunload = function () { null };
+   </script>   
+
+  <link rel="stylesheet" href="css/styles.css">
+    <title >Admin</title>
+</head>
+<body style="background-color:lightsalmon">
+    <h1 class="welcm-admin" style="color:mediumspringgreen">WELCOME ADMIN</h1>
+    <div>
+        <a class="btn btn-light btn-lg stu-reg" href="/registerStd" role="button">Student Registation </a>
+        <a class="btn btn-dark btn-lg teac-reg" href="/registerTch" role="button"> Teacher Registation</a>
+    
+    </div>
+    <div>
+        <a class="btn btn-dark btn-lg pare-reg" href="/registerParent" role="button"> Parents Registation</a>
+        <a class="btn btn-light btn-lg admin-reg" href="/registerManagement" role="button">  Registation Management</a>
+    </div>
+    <div>
+        <a class="btn btn-dark btn-lg admin-admin" href="/registerAdmin" role="button">  Registation Admin</a>
+    </div>
+        
+</body>
+</html>

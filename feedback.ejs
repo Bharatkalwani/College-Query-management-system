@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>REPLY</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand">REPLY BY : <%= name %></p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+           
+        
+        </ul>
+    </div>
+  </nav>
+
+  <body style="background-color: antiquewhite;">
+    <div class="container">
+      <!-- <p><b>name</b> <%= name %></p> -->
+
+<form  id='myform' method="post"   >
+<!--  <h3>Reply For: <%= doc.name %></h3>
+  <h3>id For: <%= doc.id %></h3>-->
+  <br>
+
+<h4>Reply</h4>
+<textarea  rows="7" cols="50"  class="form-control" name="replyMessage" required><%= reply.replyMessage%></textarea><br>
+
+     
+<button type="submit" class="btn btn-primary">Proced</button>
+
+
+</form>
+</div>
+</body>
+</html>

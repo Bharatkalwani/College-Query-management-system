@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Parents COMPOSE</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type = "text/javascript" >
+    function preventBack()
+     {
+          console.log("runs")
+         window.history.forward(); }
+   
+   setTimeout("preventBack()", 0);
+   window.onunload = function () { null };
+      </script>   
+  
+  <nav class="navbar navbar-default ">
+    <div class="container " >
+      <div class="navbar-header">
+        <p class="navbar-brand" style="color: indigo;"> COMPOSE COMPLAIN</p>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- 6 -->
+          <li id="home" ><a href="/homeParent/<%= email %>" style="color: indigo;"><b>HOME</b></a></li>
+          <li ><a href="/composeParents/<%= email %>" style="color: indigo; "><b>COMPOSE</b></a></li>
+          <li ><a href="/home" style="color: indigo;"><b>LOGOUT</b></a></li>
+
+
+        </ul>
+    </div>
+  </nav>
+  <p><%= email %></p>
+  <body class="parent-color">
+    <div class="container">
+
+<form  id='myform' method="post" action ="/composeParents/<%= email %>">
+  <h4>Name</h4>
+    <input type="text" class="form-control" name="postName" maxlength="30" placeholder="Parent Name"  required>
+  <br>
+
+<h4>Title</h4>
+<input type="text" class="form-control" name="postTitle" required ><br>
+
+<h4>Probelm</h4>
+<textarea  rows="5" cols="50"  class="form-control" name="postContent" required></textarea><br>
+
+<h4>Mobile Number</h4>
+<input type="text" class="form-control" name="postMobile" required ><br>
+
+
+<button type="submit" class="btn btn-primary">Proced</button>
+</form>
+</div>
+</body>
+</html>

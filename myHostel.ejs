@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  
+<head>
+  <meta charset="utf-8">
+  <title>homeStd</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+  <script type = "text/javascript" >
+  
+    function preventBack()
+     {
+          console.log("runs")
+         window.history.forward(); } 
+   setTimeout("preventBack()", 0);
+   window.onunload = function () { null };
+      </script>   
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 20px; background-color: gray; ">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span cl
+    
+    ass="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item" style="margin-right: 500px;">
+        <a class="nav-link active" href="#" style="color: indigo;"><b>YOUR COMPLAINS</b></a>
+      </li>
+
+      <li class="nav-item" >
+        <a class="nav-link active" href="/homeStd/<%=email%>" style="color: indigo;"><b>HOME</b></a>
+      </li>
+
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: indigo;">
+         <b> COMPLAINS</b>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/homeStd/<%=email%>" style="color: indigo;"><b>Hostel Complain</b></a>
+          <a class="dropdown-item" href="/collegeStd/<%=email%>" style="color: indigo;"><b>College Complain</b></a>
+         
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/composeStd/<%=email%>" style="color: indigo;"><b>MY HOSTEL COMPLAINS</b></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/composeStd/<%=email%>" style="color: indigo;"><b>COMPOSE</b></a>
+      </li>
+
+      
+      <li class="nav-item">
+        <a class="nav-link active" href="/home" style="color: indigo;"><b>LOGOUT</b></a>
+      </li>
+
+    </ul>
+    
+  </div>
+</nav>
+ <!-- <p> <%=email%></p> -->
+<body class="body-color" style="background-color: antiquewhite;">
+<div class="cen" style="margin-left: 30px;">
+<% for ( var i = (posts.length-1); i >= 0 ; i--) {  %>
+  <p><b>Hostel No:</b> <%= posts[i].hostel_no %></p>
+  <p><b>Room No: </b><%= posts[i].room_no %></p>
+  <p><b>Year: </b><%= posts[i].year %></p>
+  <p><b>Problem:</b> <%= posts[i].content +"."%> </p>
+   
+    <%if (posts[i].replyHostel.length>0) { %>
+   <p><b>Teacher Name</b> <%=posts[i].replyHostel[0].teacherName %></p>
+   <p><b>Reply </b><%= posts[i].replyHostel[0].replyMessage %></p>
+   <br>
+  <% }else{ %>
+    No Reply
+    <br><br>
+  <% } %>
+<% } %>
+
+</div>
+</body>
+</html>

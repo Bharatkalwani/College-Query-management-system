@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>COMPOSE</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<script type = "text/javascript" >
+  function preventBack()
+   {
+        console.log("runs")
+       window.history.forward(); }
+ 
+ setTimeout("preventBack()", 0);
+ window.onunload = function () { null };
+    </script>   
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 20px; background-color: gray; ">
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" style="margin-right: 500px;">
+        <a class="nav-link active" href="#" style="color: indigo;"><b>CREATE COLLEGE COMPLAIN</b></a>
+      </li>
+
+      <li class="nav-item" >
+        <a class="nav-link active" href="/collegeStd/<%=email%>" style="color: indigo;"><b>HOME</b></a>
+      </li>
+
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: indigo;">
+         <b> COMPLAINS</b>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/homeStd/<%=email%>" style="color: indigo;"><b>Hostel Complain</b></a>
+          <a class="dropdown-item" href="/collegeStd/<%=email%>" style="color: indigo;"><b>College Complain</b></a>
+         
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/myCollege/<%=email%>" style="color: indigo;"><b>MY COLLEGE COMPLAINS</b></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="/composeClg/<%=email%>" style="color: indigo;"><b>COMPOSE</b></a>
+      </li>
+
+      
+      <li class="nav-item">
+        <a class="nav-link active" href="/home" style="color: indigo;"><b>LOGOUT</b></a>
+      </li> </ul> 
+  </div>
+</nav>
+<body class="body-color" style="background-color: antiquewhite;" >
+   <div class="container" >
+<form  id='myform' method="post" action ="/composeClg/<%=email%>">
+  <h5>Name</h5>
+    <input type="text" class="form-control" name="postName" maxlength="30" placeholder="Name Not Mentioned"  required>
+  <br>
+<h5>Title</h5>
+<input type="text" class="form-control" name="postTitle" required ><br>
+<h5>Problem</h5>
+<textarea  rows="2" cols="50"  class="form-control" name="postContent" required></textarea><br>
+
+
+<h5>Complain To Whom:</h5>
+<select name="teacher" id="">
+  <option value="amit bohra">Amit Bohra</option>
+  <option value="nitin jain">Nitin Jain</option>
+  <option value="rajesh rajan">Rajesh Rajan</option>
+  <option value="giraj khandewal">Giraj khandewal</option>
+  
+</select>
+<br>
+<br>
+
+
+<h5>Branch & Section</h5>
+<select name="branch" id="">
+    <option value="CSE">CSE</option>
+    <option value="ME">ME</option>
+    <option value="IT">IT</option>
+    <option value="CIVIL">CIVIL</option>
+    <option value="EE">EE</option>
+    <option value="EC">EC</option>
+  </select>
+
+<select name="section" id="" style="margin-left: 30px">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+  </select>
+
+<br>
+<br>
+<input type="radio" name="year" value="1" required>
+  <label for="1">1 st Year</label><br>
+<input type="radio" name="year" value="2" required>
+  <label for="2">2 nd Year</label><br>
+  <input type="radio" name="year" value="3" required>
+  <label for="3">3 rd Year</label><br>
+<input type="radio" name="year" value="4" required>
+  <label for="4">4 th Year</label><br><br>
+  
+      
+<button type="submit" class="btn btn-primary">Proced</button>
+
+</form>
+
+
+</div>
+
+
+
+
+</body>
+</html>

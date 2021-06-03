@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Parents Complain</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type = "text/javascript" >
+    function preventBack()
+     {
+          console.log("runs")
+         window.history.forward(); }
+   
+   setTimeout("preventBack()", 0);
+   window.onunload = function () { null };
+      </script>   
+ 
+  <nav class="navbar navbar-default    ">
+    <div class=" container">
+      <div class="navbar-header  ">
+        <p class="navbar-brand " style="color: indigo;"><b>YOUR COMPLAIN</b></p>
+      </div>
+        <ul class="nav navbar-nav navbar-right ">
+        
+          <li id="home" ><a href="/homeParent/<%= email %>" style="color: indigo;"><b>HOME</b></a></li>
+          <li ><a href="/composeParents/<%= email %>" style="color: indigo; "><b>COMPOSE</b></a></li>
+          <li ><a href="/home" style="color: indigo;"><b>LOGOUT</b></a></li>
+
+        </ul>
+    </div>
+  </nav>
+  
+  <body class="parent-color">
+    <!-- <p><%= email %></p>    -->
+<div class="cen">
+  
+<% for ( var i = (posts.length-1); i >= 0 ; i--) {  %>
+  <p> <b>Name: </b><%= posts[i].name %></p>
+  <p><b>Title:</b> <%= posts[i].title %></p>
+    <p><b>Mobile No:</b> <%= posts[i].mobile %></p>
+  <p><b>Problem:</b> <%= posts[i].content%></p>
+  
+<%if (posts[i].replyParent.length>0) { %>  
+  <p><b>Teacher Name</b>  <%=posts[i].replyParent[0].teacherName %></p>
+  <p><b>REPLY</b> <%= posts[i].replyParent[0].replyMessage %></p>
+  <br>
+<% }else{ %>
+ <b> NO REPLY</b>
+  <br><br
+<% } %>
+<% } %>
+
+</div>
+</body>
+</html>

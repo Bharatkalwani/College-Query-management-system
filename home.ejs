@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>COLLEGE QUERY SYSTEM</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script>
+    function preventBack()
+       {
+            console.log("runs")
+           window.history.forward(); }
+     
+     setTimeout("preventBack()", 0);
+     window.onunload = function () { null };
+      
+    </script>
+       
+</head>
+<body style="background-color:coral;">
+    
+<div class="">
+ <!-- <img src="images/git2.jfif" alt="image" class="img"> -->
+
+    <h1 class="head">COLLEGE QUERY MANAGEMENT SYSTEM</h1>     
+    <img src="images/gitlogo.png" alt="image" class="img">
+
+      <div >   
+        <a class="btn btn-light btn-lg but-stu"  href="/loginStd" role="button"> Students Login </a>
+        <a class="btn btn-dark btn-lg but-teac" href="/loginTch" role="button">Teachers Login</a>
+      </div>
+        
+     <div>
+      <a class="btn btn-dark btn-lg but-paren" href="/loginParent" role="button">Parents Login</a>
+      <a class="btn btn-light btn-lg but-admin" href="/loginMng" role="button">Management Login</a>
+      
+     </div>
+     <a class="btn btn-dark btn-lg but-admin" href="/loginAdmin" role="button" style="margin-left: 480px; padding-left: 100px; padding-right: 100px;;">Admin Login</a>
+     <div>
+
+     </div>
+     <!-- <div class="created" style=" color:lavender;  ">
+       <h5>Created By: </h5>
+       <div class="">
+         <h6>Bharat Kalwani</h6>
+         <h6>Ambesh Sharma</h6>
+       </div> -->
+     </div>
+     </div> 
+</div>
+</body>
+</html>

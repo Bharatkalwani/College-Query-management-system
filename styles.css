@@ -1,0 +1,140 @@
+.stu-reg{
+
+  margin-top: 30px;
+  margin-left: 400px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.teac-reg{
+  margin-top: 12px;
+
+}
+
+.pare-reg{
+
+  margin-top: 30px;
+  margin-left: 400px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.admin-reg{
+  margin-top: 12px;
+}
+
+.welcm-admin{
+
+  padding-left: 400px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  font-size: 50px;
+}
+
+.created{
+
+  padding-left: 580px;
+}
+
+.but-stu
+{
+margin-left: 440px;
+margin-right: 50px;
+margin-bottom: 20px;
+
+}
+
+.but-teac
+{
+margin-bottom: 20px;
+
+}
+
+.but-paren{
+
+  margin-left: 440px;
+margin-right: 60px;
+margin-bottom: 20px;
+
+}
+
+.but-admin{
+
+  margin-bottom: 20px;
+}
+.head
+{
+padding-left: 300px;
+padding-top: 10px;
+color:lavender;
+}
+
+.img{
+
+  padding-top: 30px; 
+  margin-bottom: 60px;
+  height: 200px;
+  width: 220px;
+  margin-left: 520px;
+  
+}
+
+body {
+  background-color: #E8ECEF;
+}
+
+.body-color22{
+   background-color: #CCFFFF 
+  /* background-color:antiquewhite */
+}
+
+.body-color{
+  /* background-color: #CCFFFF */
+  background-color:antiquewhite
+}
+
+
+.centered {
+    padding-top: 100px;
+    text-align: center;
+   
+}
+.mar{
+  padding-left: 30px;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.margin{
+	margin-left: 50px;
+}
+
+.cen{
+  margin-left: 30px;;
+}
+
+.fixed-top{
+	position: fixed;
+	 margin-left:15px;
+	 
+}
+
+.parent-color{
+
+  background-color:antiquewhite ;
+}
+
+.admin-admin{
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: 460px;
+  margin-top: 20px;;
+}
+
+.nav-color{
+  color: indigo;
+}
